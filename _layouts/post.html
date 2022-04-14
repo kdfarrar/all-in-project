@@ -3,7 +3,14 @@ layout: page
 ---
 {% include favorite-button.html %}
 <script>
-	var postInfo = ["{{ page.title | json }}", "{{ page.author | json }}", "{{ page.date | json }}", "{{ page.url | json }}"];
+	var postTitle = "{{ page.title }}";
+	var postAuthor = "{{ page.author }}";
+	var postDate = "{{ page.date }}";
+	var postURL = "{{ page.url }}";
+	var postInfo = {"title": postTitle,
+				 "author": postAuthor,
+			 	 "date": postDate,
+			 	 "url": postURL};
 </script>
 <div id="favorite-post"></div>
 	{% assign read_time = page.content | number_of_words | divided_by: 200 %}
