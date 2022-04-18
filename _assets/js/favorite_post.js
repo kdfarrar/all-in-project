@@ -5,7 +5,7 @@ function favoritePost() {
 	var favString = getFavorites();
 
 	if (favString !== null) {
-		favString += "," + JSON.stringify(postInfo);
+		favString += "|" + JSON.stringify(postInfo);
 	}
 	else {
 		favString = JSON.stringify(postInfo);
@@ -25,9 +25,11 @@ function showFavorites() {
 	var favText = "";
 	var favPosts = getFavorites();
 
-	// for (i = 0; i < favPosts.length; i++) {
-	// 	favText += favPosts;
-	// }
+	favPosts = favPosts.split("|");
 
-	myFavorites.innerHTML += favPosts;
+	for (i = 0; i < favPosts.length; i++) {
+		favText += JSON.parse(favPosts[i]).title + "<br />";
+	}
+
+	myFavorites.innerHTML += favText;
 }
