@@ -3,7 +3,10 @@
 <!DOCTYPE html>
 <html lang="en">
 	{% include header.html %}
-<body>
+<body onload="showFavorites();">
+	<h1>Your Favorite Posts:</h1>
+	<div id="myFavorites">
+		</div>
 	{{ content }}
 </body>
 </html>

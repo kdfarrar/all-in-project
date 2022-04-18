@@ -2,27 +2,17 @@ function favoritePost() {
 	var post = document.body;
 	post.classList.toggle("favorite"); 		// toggle red border around button
 
-	//var saveData = getFavorites();
+	var favString = getFavorites();
 
-	favoritePost.innerHTML += postInfo;
-
-	//var favPosts = JSON.parse(saveData);
-	var favString = "";
-
-	// if (favPosts.length === 0) {
-	// 	favString += postInfo;
-	// }
-	// else if (favPosts.has(postData) == false) {
-	// 	favPosts += postInfo);
-	// 	favString = JSON.stringify(favPosts);
-	// }
-
-	favoritePost.innerHTML += "<br/>" + favString;		//See what's in favString
+	if (favString !== null) {
+		favString += "," + JSON.stringify(postInfo);
+	}
+	else {
+		favString = JSON.stringify(postInfo);
+	}
 
 	localStorage.removeItem("favorites");
 	localStorage.setItem("favorites", favString);
-
-	console.log(postInfo.author);
 }
 
 function getFavorites() {
@@ -33,11 +23,11 @@ function getFavorites() {
 function showFavorites() {
 	var myFavorites = document.getElementById("myFavorites");
 	var favText = "";
-	var favPosts = JSON.parse(getFavorites());
+	var favPosts = getFavorites();
 
-	for (var i = 0; i < favPosts.length; i++) {
-		favText += favPosts[i].title + "<br />";
-	}
+	// for (i = 0; i < favPosts.length; i++) {
+	// 	favText += favPosts;
+	// }
 
 	myFavorites.innerHTML += favPosts;
 }
