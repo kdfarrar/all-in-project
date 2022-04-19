@@ -1,3 +1,11 @@
+// function checkFavorite() {
+// 	savedFavs = getFavorites();
+//
+// 	if (postInfo in savedFavs) {
+// 		post.classList.add("favorite");
+// 	}
+// }
+
 function favoritePost() {
 	var post = document.body;
 	post.classList.toggle("favorite"); 		// toggle red border around button
