@@ -22,7 +22,7 @@ title: All In Project
 #email: contact@blog.com
 #description: >- # this means to ignore newlines until "baseurl:"
   #This is our awesome blog!
-domain: http://kdfarrar.github.io
+#domain: http://kdfarrar.github.io
 baseurl: "/all-in-project" # the subpath of your site, e.g. /blog
 url: https://kdfarrar.github.io/all-in-project/ # the base hostname & protocol for your site, e.g. http://example.com
 collections:
