@@ -19,9 +19,9 @@
 # in the templates via {{ site.myvariable }}.
 
 title: All In Project
-email: contact@blog.com
-description: >- # this means to ignore newlines until "baseurl:"
-  This is our awesome blog!
+#email: contact@blog.com
+#description: >- # this means to ignore newlines until "baseurl:"
+  #This is our awesome blog!
 domain: http://kdfarrar.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://kdfarrar.github.io/all-in-project/ # the base hostname & protocol for your site, e.g. http://example.com
@@ -64,3 +64,5 @@ exclude:
 include:
      - _assets
      - _layouts
+     - _posts
+     - _includes
