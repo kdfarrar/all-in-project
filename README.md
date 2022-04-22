@@ -9,9 +9,6 @@ You're going to be building a blog for yourself to share your experiences on you
 - [x] Page for each blog post
 - [x] Contact form
 - [x] A way to favorite posts and come back to them 
-- [x] Page for each blog post
-- [x] Contact form
-- [x] A way to favorite posts and come back to them 
 - [x] Calculating the length of each post in time to read.
 
 You should aim to achieve the above tasks by the end of the program. You should break them into smaller sub tasks and work as a team to build this blog!
