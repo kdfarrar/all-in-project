@@ -1,21 +1,27 @@
 ---
-layout: page
+layout: post
 ---
-{% include favorite-button.html %}
-<script>
-	var postTitle = "{{ page.title }}";
-	var postAuthor = "{{ page.author }}";
-	var postDate = "{{ page.date }}";
-	var postURL = "{{ page.url }}";
-	var postInfo = {"title": postTitle,
-				 "author": postAuthor,
-			 	 "date": postDate,
-			 	 "url": postURL};
-</script>
-<div id="favorite-post"></div>
+<!DOCTYPE html>
+<html lang="en">
+		{% include header.html %}
+	<body onload="checkFavorite();">
+	<script>
+		var postTitle = "{{ page.title }}";
+		var postAuthor = "{{ page.author }}";
+		var postDate = "{{ page.date }}";
+		var postURL = "{{ page.url }}";
+		var postInfo = {"title":postTitle,
+					 "author":postAuthor,
+				 	 "date":postDate,
+				 	 "url":postURL};
+	</script>
+	<div id="favorite-post"></div>
+	{% include favorite-button.html %}
+
 	{% assign read_time = page.content | number_of_words | divided_by: 200 %}
 	{% if read_time > 0 %}
-		<p>{{ read_time }} minute read</p>
+		<h3>{{ read_time }} minute read</h3>
 	{% endif %}
 
-{{ content }}
+	{{ content }}
+</body>
